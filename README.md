@@ -68,21 +68,3 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-bot-battlr/
-├─ db.json
-├─ README.md
-└─ client/
-   ├─ src/
-   │  ├─ api/
-   │  │  └─ botsApi.js
-   │  ├─ components/
-   │  │  ├─ BotCollection.js
-   │  │  ├─ BotCard.js
-   │  │  ├─ YourBotArmy.js
-   │  │  └─ Navbar.js
-   │  ├─ App.js
-   │  ├─ index.js
-   │  └─ styles.css
-   └─ package.json
-
