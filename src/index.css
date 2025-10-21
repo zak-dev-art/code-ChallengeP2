@@ -1,13 +1,217 @@
+/* General App Layout */
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #222;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 1rem 0;
+  color: #222;
+}
+
+/* Loading and Error States */
+.loading,
+.error {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* BotCollection and Army Layouts */
+.bot-grid,
+.army-list {
+  display: grid;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.bot-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.army-list {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* BotCard Styling */
+.bot-card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.bot-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bot avatar */
+.bot-card img {
+  border-radius: 50%;
+  border: 3px solid #e2e8f0;
+  margin-bottom: 0.5rem;
+}
+
+/* Bot details list */
+.bot-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.bot-card li {
+  margin: 2px 0;
+}
+
+/* Catchphrase styling */
+.bot-card p {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+  min-height: 2rem;
+}
+
+/* Enlist & Discharge buttons */
+.bot-card button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.bot-card button:hover {
+  background-color: #2563eb;
+}
+
+/* Red X Discharge button (top-right corner) */
+.bot-card .discharge {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background-color: #ef4444;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.bot-card .discharge:hover {
+  background-color: #dc2626;
+}
+
+/* YourBotArmy items */
+.army-item {
+  background-color: #e5f3ff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.army-item:hover {
+  background-color: #dbeafe;
+  transform: scale(1.02);
+}
+
+.army-item img {
+  border-radius: 50%;
+  border: 2px solid #93c5fd;
+}
+
+.army-item strong {
+  display: block;
+  font-size: 1rem;
+  color: #111;
+}
+
+.army-item div {
+  font-size: 0.85rem;
+  color: #444;
+}
+
+/* Utility buttons and states */
+button:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .bot-card {
+    padding: 0.8rem;
+  }
+
+  .bot-card img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1f2937;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.navbar-links a {
+  color: #d1d5db;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #fff;
 }
