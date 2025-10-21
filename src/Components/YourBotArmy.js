@@ -9,12 +9,23 @@ export default function YourBotArmy({ army, onRelease }) {
           <p>No bots enlisted yet. Click a bot to add it to your army.</p>
         ) : (
           army.map(bot => (
-            <div key={bot.id} className="army-item" onClick={() => onRelease(bot.id)} role="button" tabIndex={0}>
-              <img src={bot.avatar_url} alt={`${bot.name} avatar`} width="80" />
-              <div>
+            <div key={bot.id} className="army-item">
+              <img
+                src={bot.avatar_url}
+                alt={`${bot.name} avatar`}
+                width="80"
+                height="80"
+              />
+              <div className="army-info">
                 <strong>{bot.name}</strong>
                 <div>{bot.bot_class}</div>
               </div>
+              <button
+                className="deselect-btn"
+                onClick={() => onRelease(bot.id)}
+              >
+                Deselect
+              </button>
             </div>
           ))
         )}

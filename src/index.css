@@ -215,3 +215,17 @@ button:disabled {
 .navbar-links a:hover {
   color: #fff;
 }
+.deselect-btn {
+  background-color: #ff7675;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.deselect-btn:hover {
+  background-color: #d63031;
+}
