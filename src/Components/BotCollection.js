@@ -18,3 +18,4 @@ export default function BotCollection({ bots, onEnlist, onDischarge }) {
     </section>
   );
 }
+
