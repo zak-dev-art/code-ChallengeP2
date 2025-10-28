@@ -15,7 +15,7 @@ function App() {
       try {
         const classes = ["Support", "Medic", "Assault", "Defender", "Captain"];
 
-        const data = Array.from({ length: 20 }).map((_, i) => ({
+        const data = Array.from({ length: 200 }).map((_, i) => ({
           id: i + 1,
           name: `Bot-${i + 1}`,
           health: Math.floor(Math.random() * 100),
